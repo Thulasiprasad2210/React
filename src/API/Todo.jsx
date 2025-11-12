@@ -23,7 +23,7 @@ const Todo = () => {
         {todo.map((x)=>
          (
             <div key={x.id} className='todo'>
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-original-font-checklist-background-image_529297.jpg"/>
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-original-font-checklist-background-image_529297.jpg" alt='Image'/>
             <p><strong>Id : </strong>{x.id}</p>
             <p><strong>ToDo : </strong>{x.todo}</p>
             <p><strong>UserId : </strong>{x.userId}</p>
