@@ -4,15 +4,19 @@ import React, { useEffect, useState } from 'react'
 const Todo = () => {
     const [todo,setTodo]=useState([])
     const [datas,setDatas]=useState(null)
+    const [loading, setLoading] = useState(true);
     useEffect(()=>{
         axios.get("https://dummyjson.com/todos")
         .then((Response=>{
             setTodo(Response.data.todos)
+            setLoading(false)
         }))
         .catch((err)=>{
             setDatas(err.message)
+            setLoading(false)
         })
     },[])
+    if (loading) return <p>Loading...</p>;
     if(datas){
         return <p>404 : {datas}</p>
     }
