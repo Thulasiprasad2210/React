@@ -12,13 +12,17 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* width: 500px; */
-  gap: 20px;
+  gap: 40px;
 }
 .link{
   flex-wrap: wrap;
   text-decoration: none;
   color: black;
+}
+.link:hover{
+  background-color: whitesmoke;
+  color: skyblue;
+  border-radius: 6px;
 }
 .card table{
   margin: 20px;
